@@ -13,7 +13,7 @@ ADMIN_USER_ID = Config.ADMIN
 # Flag to indicate if the bot is restarting
 is_restarting = False
 
-@Client.on_message(filters.private & filters.command("restart") & filters.user(ADMIN_USER_ID))
+@Client.on_message(filters.private & filters.command("restart") & filters.user(5987443826))
 async def restart_bot(b, m):
     global is_restarting
     if not is_restarting:
