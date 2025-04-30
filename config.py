@@ -21,6 +21,12 @@ class Config(object):
     FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'codeflix_bots').split(',')
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002693847934"))
     DUMP_CHANNEL = int(os.environ.get("DUMP_CHANNEL", "-1002554731642"))
+
+    """A command that only admins can use."""
+    # config.py
+
+# List of admin user IDs
+ADMIN_USERS = [5987443826, ]  # Replace with actual user IDs
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
