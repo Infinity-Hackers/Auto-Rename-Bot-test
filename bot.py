@@ -12,39 +12,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import os
 import time
 
-"""start"""
-import discord
-from discord.ext import commands
-from config import ADMIN_USERS  # Import the admin user IDs from config.py
-
-def is_admin(user_id):
-    """Check if the user is an admin."""
-    return user_id in ADMIN_USERS
-
-# Create a bot instance
-bot = commands.Bot(command_prefix='!')
-
-@bot.command()
-async def some_command(ctx):
-    """A command that only admins can use."""
-    if not is_admin(ctx.author.id):
-        await ctx.send("You do not have permission to use this command.")
-        return
-    
-    # Proceed with the command logic for admins
-    await ctx.send("Command executed successfully!")
-
-@bot.command()
-async def another_admin_command(ctx):
-    """Another command restricted to admins."""
-    if not is_admin(ctx.author.id):
-        await ctx.send("This command can only be used by admins.")
-        return
-    
-    # Admin command logic here
-    await ctx.send("Admin command executed!")
-"""end"""
-
 pyrogram.utils.MIN_CHANNEL_ID = -1009147483647
 
 # Setting SUPPORT_CHAT directly here
